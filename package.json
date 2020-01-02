@@ -12,8 +12,7 @@
   },
   "scripts": {
     "lint": "eslint *.js --fix",
-    "lint:ci": "eslint *.js",
-    "style": "prettier --check *.js"
+    "lint:ci": "eslint *.js"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
