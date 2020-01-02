@@ -15,7 +15,10 @@
     "build": "tsc",
     "lint": "eslint *.ts --fix",
     "lint:ci": "eslint *.ts",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint:ci",
+    "preversion": "npm run lint:ci",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@types/node": "^13.1.2",
