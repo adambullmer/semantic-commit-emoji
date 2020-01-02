@@ -31,7 +31,7 @@ export default ([, , filePath]: typeof process.argv): void => {
     return;
   }
 
-  const [, , hasEmoji, commitType] = match;
+  const [, hasEmoji, commitType] = match;
   if (hasEmoji !== undefined) {
     return;
   }
