@@ -9,5 +9,11 @@
   "private": false,
   "engines": {
     "node": ">=6"
+  },
+  "scripts": {
+    "style": "prettier --check *.js"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
