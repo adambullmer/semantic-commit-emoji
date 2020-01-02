@@ -11,6 +11,8 @@
     "node": ">=6"
   },
   "scripts": {
+    "lint": "eslint *.js --fix",
+    "lint:ci": "eslint *.js",
     "style": "prettier --check *.js"
   },
   "devDependencies": {
