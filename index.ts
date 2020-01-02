@@ -15,7 +15,7 @@ const typeEmojiMap: { [key: string]: string | undefined } = {
   types: "label",
 };
 const allowedTypes = Object.keys(typeEmojiMap);
-const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})!?:`, "gi");
+const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})!?:`, "i");
 
 export default ([, , filePath]: typeof process.argv): void => {
   const commitString = fs.readFileSync(filePath, "utf8");
