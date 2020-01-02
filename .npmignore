@@ -1,4 +1,4 @@
 # README, package.json, and LICENSE are excluded by default
 *
-!index.js
-!cli.js
+!dist/**/*
+!types/**/*

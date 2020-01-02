@@ -1,8 +1,9 @@
 {
   "name": "semantic-commit-emoji",
   "version": "0.1.0",
-  "main": "index.js",
-  "bin": "cli.js",
+  "main": "dist/index.js",
+  "bin": "dist/cli.js",
+  "types": "types/index.d.ts",
   "repository": "git@github.com:adambullmer/semantic-commit-emoji.git",
   "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
   "license": "GPL-3.0",
@@ -11,8 +12,10 @@
     "node": ">=8"
   },
   "scripts": {
-    "lint": "eslint *.js --fix",
-    "lint:ci": "eslint *.js"
+    "build": "tsc",
+    "lint": "eslint *.ts --fix",
+    "lint:ci": "eslint *.ts",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^13.1.2",
