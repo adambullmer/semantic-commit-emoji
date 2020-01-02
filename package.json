@@ -6,5 +6,8 @@
   "repository": "git@github.com:adambullmer/semantic-commit-emoji.git",
   "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
   "license": "GPL-3.0",
-  "private": false
+  "private": false,
+  "engines": {
+    "node": ">=6"
+  }
 }
