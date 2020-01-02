@@ -8,7 +8,7 @@
   "license": "GPL-3.0",
   "private": false,
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "lint": "eslint *.js --fix",
