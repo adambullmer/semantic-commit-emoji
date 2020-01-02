@@ -1,6 +1,6 @@
-const fs = require("fs");
+import * as fs from "fs";
 
-const typeEmojiMap = {
+const typeEmojiMap: { [key: string]: string | undefined } = {
   feat: "sparkles",
   fix: "bug",
   docs: "pencil",
@@ -17,11 +17,11 @@ const typeEmojiMap = {
 const allowedTypes = Object.keys(typeEmojiMap);
 const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})!?:`, "gi");
 
-module.exports = ([, , filePath]) => {
+export default ([, , filePath]: typeof process.argv): void => {
   const commitString = fs.readFileSync(filePath, "utf8");
   const [firstLine] = commitString.split("\n", 1);
 
-  function updateMessage(emoji) {
+  function updateMessage(emoji: string): void {
     const newMessage = `:${emoji}:${commitString}`;
     fs.writeFileSync(filePath, newMessage);
   }
@@ -36,5 +36,10 @@ module.exports = ([, , filePath]) => {
     return;
   }
 
-  updateMessage(typeEmojiMap[commitType]);
+  const emoji = typeEmojiMap[commitType];
+  if (emoji === undefined) {
+    return;
+  }
+
+  updateMessage(emoji);
 };
