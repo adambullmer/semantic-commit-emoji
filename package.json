@@ -12,6 +12,10 @@
     "node": ">=8"
   },
   "scripts": {
+    "clean": "yarn clean:build && yarn clean:test",
+    "clean:build": "rm -rf dist types",
+    "clean:test": "rm -rf artifacts",
+    "prebuild": "yarn clean:build",
     "build": "tsc",
     "lint": "eslint *.ts {lib,tests}/**/*.ts --fix",
     "lint:ci": "eslint *.ts {lib,tests}/**/*.ts --format junit --output-file artifacts/lint-results.xml",
