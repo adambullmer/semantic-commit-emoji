@@ -96,18 +96,9 @@ commit-message-emoji "$@"
 npx commit-message-emoji "$@"
 ```
 
-### Usage with Husky, or package.json scripts
+### Usage with Husky
 
-```json
-{
-  "scripts": {
-    "semantic-commit-emoji": "semmantic-commit-emoji $HUSKY_GIT_PARAMS"
-  },
-  "husky": {
-    "commit-msg": "semantic-commit-emoji"
-  }
-}
-```
+An example for husky can be found in this repo's [.huskyrs.js file](https://github.com/adambullmer/semantic-commit-emoji/blob/master/.huskyrc.js).
 
 ## Limitations
 
