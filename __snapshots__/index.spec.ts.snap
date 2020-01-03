@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Semantic Commit Emoji Processor ":wrench:chore: A commit with an existing emoji") 1`] = `":wrench:chore: A commit with an existing emoji"`;
+
+exports[`Semantic Commit Emoji Processor "Merge pull request #1") 1`] = `":twisted_rightwards_arrows:Merge pull request #1"`;
+
+exports[`Semantic Commit Emoji Processor "Revert: Merge pull request #1") 1`] = `":rewind:Revert: Merge pull request #1"`;
+
+exports[`Semantic Commit Emoji Processor "a normal commit message") 1`] = `"a normal commit message"`;
+
+exports[`Semantic Commit Emoji Processor "feat!: A commit with a breaking change notation") 1`] = `":sparkles:feat!: A commit with a breaking change notation"`;
+
+exports[`Semantic Commit Emoji Processor "feat: A multiline commit
+
+A summary about the commit in detail
+
+Resolves #2") 1`] = `
+":sparkles:feat: A multiline commit
+
+A summary about the commit in detail
+
+Resolves #2"
+`;
+
+exports[`Semantic Commit Emoji Processor "fix: A commit with a semantic type") 1`] = `":bug:fix: A commit with a semantic type"`;
+
+exports[`Semantic Commit Emoji Processor "v1.2.3") 1`] = `":bookmark:v1.2.3"`;
