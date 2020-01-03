@@ -1,5 +1,3 @@
-import * as fs from "fs";
-
 // Special automatic commit overrides
 const versionEmoji = "bookmark";
 const revertEmoji = "rewind";
@@ -29,47 +27,45 @@ const revertRegex = new RegExp(/^revert(: | ")/, "gi");
 const mergeRegex = new RegExp(/^merge /, "gi");
 const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})!?:`, "i");
 
-export default ([, , filePath]: typeof process.argv): void => {
-  const commitString = fs.readFileSync(filePath, "utf8");
+/**
+ * Prepends a corresponding emoji to a commit message and return the result.
+ */
+export default (commitString: string): string => {
   const [firstLine] = commitString.split("\n", 1);
 
-  function updateMessage(emoji: string): void {
-    const newMessage = `:${emoji}:${commitString}`;
-    fs.writeFileSync(filePath, newMessage);
+  function updateMessage(emoji: string): string {
+    return `:${emoji}:${commitString}`;
   }
 
   const versionMatch = firstLine.match(versionRegex);
   if (versionMatch !== null) {
-    updateMessage(versionEmoji);
-    return;
+    return updateMessage(versionEmoji);
   }
 
   const mergeMatach = firstLine.match(mergeRegex);
   if (mergeMatach !== null) {
-    updateMessage(mergeEmoji);
-    return;
+    return updateMessage(mergeEmoji);
   }
 
   const revertMatach = firstLine.match(revertRegex);
   if (revertMatach !== null) {
-    updateMessage(revertEmoji);
-    return;
+    return updateMessage(revertEmoji);
   }
 
   const match = firstLine.match(semanticEmojiRegex);
   if (match === null) {
-    return;
+    return commitString;
   }
 
   const [, hasEmoji, commitType] = match;
   if (hasEmoji !== undefined) {
-    return;
+    return commitString;
   }
 
   const emoji = typeEmojiMap[commitType];
   if (emoji === undefined) {
-    return;
+    return commitString;
   }
 
-  updateMessage(emoji);
+  return updateMessage(emoji);
 };

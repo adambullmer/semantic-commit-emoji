@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
-import processCommitMessage from "./index";
+/**
+ * Entrypoint for processing command line execution. Process CLI arguments
+ * and call the correct processor.
+ */
+import processFile from "./lib/process-file";
 
-processCommitMessage(process.argv);
+const [, , filePath] = process.argv;
+
+processFile(filePath);
