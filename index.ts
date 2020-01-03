@@ -75,8 +75,8 @@ const typeEmojiMap: EmojiMap = {
   locale: "globe_with_meridians",
   ci: "construction_worker",
   chore: "wrench",
-  types: "label",
-};
+  types: "label"
+}
 const allowedTypes = Object.keys(typeEmojiMap);
 const versionRegex = new RegExp(
   /^v?([0-9]+).([0-9]+).([0-9]+)(?:-([0-9a-z-]+(?:.[0-9a-z-]+)*))?(?:\+[0-9a-z-]+)?$/,
