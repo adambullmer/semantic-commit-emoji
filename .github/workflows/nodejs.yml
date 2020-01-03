@@ -3,7 +3,16 @@ name: Node CI
 on: [push]
 
 jobs:
-  build:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: ESLint checks
+        uses: gimenete/eslint-action@1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,7 +28,6 @@ jobs:
       - name: yarn install, test, and build
         run: |
           yarn install
-          yarn lint:ci
           yarn test:ci
           yarn build
         env:
