@@ -16,4 +16,12 @@ module.exports = {
     "no-console": "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
   },
+  overrides: [
+    {
+      files: ["**/*.spec.ts", "**/__mocks__/**/*.{j,t}s"],
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };
