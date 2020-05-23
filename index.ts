@@ -1,6 +1,6 @@
 /**
- * Expected, known, and default list of semantici commit types. Not an exhaustive
- * list as extending this list may be possible with an external onfig file.
+ * Expected, known, and default list of semantic commit types. Not an exhaustive
+ * list as extending this list may be possible with an external config file.
  */
 export type CommitType =
   | "feat"
