@@ -1,6 +1,6 @@
 module.exports = {
   hooks: {
     "pre-commit": "yarn lint:ci",
-    "commit-msg": "npx semantic-commit-emoji $HUSKY_GIT_PARAMS",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS && node ./dist/cli.js $HUSKY_GIT_PARAMS",
   },
 };
