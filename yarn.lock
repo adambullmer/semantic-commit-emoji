@@ -327,6 +327,11 @@
   dependencies:
     find-up "^4.0.0"
 
+"@commitlint/types@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.0.0.tgz#a5707ab4fa76ef17ac3d6d12cc92dcdbaf888ab9"
+  integrity sha512-GOCo0uXLner/AZ061+gEKDRKgvBBL9Z9c6spBmWLRZ19oW8v+ilADwJNmyAkq4vqkhd+ZyUOeuFgZTL9IKpmmA==
+
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.9.0.tgz#79b1bc06fb74a8cfb01cbdedf945584b1b9707f0"

@@ -8,7 +8,8 @@ const getPackages = ({ cwd } = { cwd: process.cwd() }) => readDir(path.join(cwd,
 
 module.exports = {
   extends: ["@commitlint/config-conventional"],
-  parserPreset: "./parser",
+  plugins: ["commitlint-plugin-semantic-commit-emoji"],
+  parserPreset: "commitlint-plugin-semantic-commit-emoji/dist/parser",
   rules: {
     "subject-case": [2, "always", "sentence-case"],
     "type-enum": [
