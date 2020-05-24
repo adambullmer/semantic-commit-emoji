@@ -5,6 +5,7 @@
   "bin": "dist/cli.js",
   "types": "types/index.d.ts",
   "repository": "git@github.com:adambullmer/semantic-commit-emoji.git",
+  "homepage": "https://github.com/adambullmer/semantic-commit-emoji/tree/master/packages/cli#readme",
   "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
   "license": "GPL-3.0",
   "private": false,
