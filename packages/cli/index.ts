@@ -84,7 +84,7 @@ const versionRegex = new RegExp(
 );
 const revertRegex = new RegExp(/^revert(: | ")/, "gi");
 const mergeRegex = new RegExp(/^merge /, "gi");
-const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})!?:`, "i");
+const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})(\\([^)]+\\))?!?:`, "i");
 
 /**
  * Prepends a corresponding emoji to a commit message and return the result.
