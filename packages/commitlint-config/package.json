@@ -19,8 +19,8 @@
     "build": "tsc",
     "lint": "eslint *.ts --fix",
     "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
-    "test": "jest --reporters=default",
-    "test:ci": "jest --ci --runInBand --coverage",
+    "test": "echo 'No tests defined'",
+    "test:ci": "echo 'No tests defined'",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint:ci",
     "preversion": "npm run lint:ci",
@@ -31,17 +31,13 @@
   },
   "devDependencies": {
     "@commitlint/types": "^9.0.0",
-    "@types/jest": "^24.0.25",
     "@types/node": "^13.1.2",
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "jest": "^24.9.0",
-    "jest-junit": "^10.0.0",
     "prettier": "^1.19.1",
-    "ts-jest": "^24.2.0",
     "typescript": "^3.7.4"
   },
   "peerDependencies": {
