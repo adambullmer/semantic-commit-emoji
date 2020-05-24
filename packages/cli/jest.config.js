@@ -1,5 +1,5 @@
 module.exports = {
-  coverageDirectory: "artifacts/coverage",
+  coverageDirectory: "../../artifacts/coverage",
   testPathIgnorePatterns: ["/node-modules/", "/dist/"],
   transform: {
     "^.+\\.ts$": "ts-jest",
@@ -9,7 +9,7 @@ module.exports = {
     [
       "jest-junit",
       {
-        outputDirectory: "artifacts",
+        outputDirectory: "../../artifacts",
         outputName: "test-results.xml",
       },
     ],

@@ -1,0 +1,46 @@
+{
+  "name": "commitlint-config-semantic-commit-emoji",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "repository": "git@github.com:adambullmer/semantic-commit-emoji.git",
+  "homepage": "https://github.com/adambullmer/semantic-commit-emoji/tree/master/packages/commitlint-config#readme",
+  "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
+  "license": "GPL-3.0",
+  "private": false,
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "clean": "yarn clean:build && yarn clean:test",
+    "clean:build": "rm -rf dist types",
+    "clean:test": "rm -rf artifacts",
+    "prebuild": "yarn clean:build",
+    "build": "tsc",
+    "lint": "eslint *.ts --fix",
+    "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
+    "test": "echo 'No tests defined'",
+    "test:ci": "echo 'No tests defined'",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint:ci",
+    "preversion": "npm run lint:ci",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "commitlint-plugin-semantic-commit-emoji": "*"
+  },
+  "devDependencies": {
+    "@commitlint/types": "^9.0.0",
+    "@types/node": "^13.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "^8.3.5"
+  }
+}
