@@ -19,13 +19,19 @@ module.exports = {
       },
     ],
     [
+      "@semantic-release/npm",
+      {
+        tarballDir: "artifacts/package",
+      },
+    ],
+    [
       "@semantic-release/github",
       {
         failComment: false,
         failTitle: false,
         labels: false,
+        assets: "artifacts/package/*.tgz",
       },
     ],
-    "@semantic-release/npm",
   ],
 };
