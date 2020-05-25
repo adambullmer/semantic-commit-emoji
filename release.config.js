@@ -18,5 +18,13 @@ module.exports = {
         parserOpts: parserPreset.default.parserOpts,
       },
     ],
+    [
+      "@semantic-release/github",
+      {
+        failComment: false,
+        failTitle: false,
+        labels: false,
+      },
+    ],
   ],
 };
