@@ -26,5 +26,6 @@ module.exports = {
         labels: false,
       },
     ],
+    "@semantic-release/npm",
   ],
 };
