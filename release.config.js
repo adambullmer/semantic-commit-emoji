@@ -30,7 +30,7 @@ module.exports = {
       "@semantic-release/git",
       {
         assets: ["package.json"],
-        message: ":wrench:chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+        message: ":wrench:chore: Release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
     [
