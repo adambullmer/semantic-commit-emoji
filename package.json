@@ -13,6 +13,8 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "commitlint-config-semantic-commit-emoji": "*",
-    "husky": "^3.1.0"
+    "husky": "^3.1.0",
+    "semantic-release": "^17.0.8",
+    "semantic-release-monorepo": "^7.0.2"
   }
 }
