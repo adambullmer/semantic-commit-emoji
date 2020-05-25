@@ -13,18 +13,15 @@
   },
   "scripts": {
     "clean": "yarn clean:build && yarn clean:test",
-    "clean:build": "rm -rf dist types artifacts",
+    "clean:build": "rm -rf dist types",
     "clean:test": "rm -rf artifacts",
-    "prebuild": "yarn clean:build",
+    "prebuild": "yarn clean",
     "build": "tsc",
     "lint": "eslint *.ts --fix",
     "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
     "test": "echo 'No tests defined'",
     "test:ci": "echo 'No tests defined'",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint:ci",
-    "preversion": "npm run lint:ci",
-    "postversion": "git push && git push --tags"
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@commitlint/types": "^9.0.0",
