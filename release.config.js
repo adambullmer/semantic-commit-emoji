@@ -19,18 +19,18 @@ module.exports = {
       },
     ],
     [
-      "@semantic-release/git",
-      {
-        assets: ["package.json"],
-        message: ":wrench:chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-      },
-    ],
-    [
       "@semantic-release/npm",
       {
         // Requires OTP code. Running in subsequent step with interactive prompt
         npmPublish: false,
         tarballDir: "artifacts/package",
+      },
+    ],
+    [
+      "@semantic-release/git",
+      {
+        assets: ["package.json"],
+        message: ":wrench:chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
     [
