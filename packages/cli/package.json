@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "yarn clean:build && yarn clean:test",
-    "clean:build": "rm -rf dist types",
+    "clean:build": "rm -rf dist types artifacts",
     "clean:test": "rm -rf artifacts",
     "prebuild": "yarn clean:build",
     "build": "tsc",
