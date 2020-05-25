@@ -11,6 +11,12 @@ module.exports = {
         parserOpts: parserPreset.default.parserOpts,
       },
     ],
-    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        preset: "conventionalcommits",
+        parserOpts: parserPreset.default.parserOpts,
+      },
+    ],
   ],
 };
