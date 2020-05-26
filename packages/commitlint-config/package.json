@@ -21,7 +21,7 @@
     "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
     "test": "echo 'No tests defined'",
     "test:ci": "echo 'No tests defined'",
-    "prepare": "npm run build"
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "commitlint-plugin-semantic-commit-emoji": "*"
