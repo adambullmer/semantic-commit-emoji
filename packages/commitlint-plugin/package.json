@@ -21,7 +21,8 @@
     "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
     "test": "echo 'No tests defined'",
     "test:ci": "echo 'No tests defined'",
-    "postinstall": "yarn build"
+    "postinstall": "yarn build",
+    "release:tarball": "npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "devDependencies": {
     "@commitlint/types": "^9.0.0",
