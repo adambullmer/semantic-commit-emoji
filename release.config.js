@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const parserPreset = require("commitlint-plugin-semantic-commit-emoji/dist/parser");
+const { parserOpts } = require("commitlint-plugin-semantic-commit-emoji/dist/parser");
+const preset = "conventionalcommits";
 
 module.exports = {
   extends: "semantic-release-monorepo",
@@ -7,15 +8,15 @@ module.exports = {
     [
       "@semantic-release/commit-analyzer",
       {
-        preset: "conventionalcommits",
-        parserOpts: parserPreset.default.parserOpts,
+        preset,
+        parserOpts,
       },
     ],
     [
       "@semantic-release/release-notes-generator",
       {
-        preset: "conventionalcommits",
-        parserOpts: parserPreset.default.parserOpts,
+        preset,
+        parserOpts,
       },
     ],
     [
