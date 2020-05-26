@@ -27,4 +27,7 @@ const config: UserConfig = {
   },
 };
 
-export default config;
+// Destructure to mimic behavior of module.exports
+export const plugins = config.plugins;
+export const parserPreset = config.parserPreset;
+export const rules = config.rules;
