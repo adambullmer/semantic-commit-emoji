@@ -23,7 +23,7 @@
     "test": "jest --reporters=default",
     "test:ci": "jest --ci --runInBand --coverage",
     "prepare": "yarn build",
-    "release:tarball": "npm publish $(ls -t artifacts/package/*.tgz | head -1)"
+    "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
