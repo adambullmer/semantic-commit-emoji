@@ -1,6 +1,6 @@
 {
   "name": "commitlint-config-semantic-commit-emoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "repository": "git@github.com:adambullmer/semantic-commit-emoji.git",
@@ -21,7 +21,7 @@
     "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
     "test": "echo 'No tests defined'",
     "test:ci": "echo 'No tests defined'",
-    "postinstall": "yarn build",
+    "prepare": "yarn build",
     "release:tarball": "npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "dependencies": {

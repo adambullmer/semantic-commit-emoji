@@ -1,6 +1,6 @@
 {
   "name": "semantic-commit-emoji",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "dist/index.js",
   "bin": "dist/cli.js",
   "types": "types/index.d.ts",
@@ -22,7 +22,7 @@
     "lint:ci": "eslint *.ts {lib,tests}/**/*.ts --format junit --output-file ../../artifacts/lint-results.xml",
     "test": "jest --reporters=default",
     "test:ci": "jest --ci --runInBand --coverage",
-    "postinstall": "yarn build",
+    "prepare": "yarn build",
     "release:tarball": "npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "devDependencies": {
