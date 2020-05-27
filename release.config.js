@@ -10,6 +10,13 @@ module.exports = {
       {
         preset,
         parserOpts,
+        releaseRules: [
+          { type: "types", scope: "*", release: "minor" },
+          { type: "refactor", release: "minor" },
+          { type: "style", release: "patch" },
+          { type: "hotfix", release: "patch" },
+          { type: "locale", release: "patch" },
+        ],
       },
     ],
     [
