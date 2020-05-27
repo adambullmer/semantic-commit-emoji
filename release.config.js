@@ -16,6 +16,7 @@ module.exports = {
           { type: "style", release: "patch" },
           { type: "hotfix", release: "patch" },
           { type: "locale", release: "patch" },
+          { type: "docs", scope: "*", release: "patch" },
         ],
       },
     ],
