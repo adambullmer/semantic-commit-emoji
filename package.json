@@ -8,7 +8,8 @@
     "prerelease": "yarn workspaces run build",
     "release": "yarn workspaces run semantic-release",
     "semantic-release": "semantic-release",
-    "postrelease": "yarn workspaces run release:tarball"
+    "postrelease": "yarn workspaces run release:tarball",
+    "prepare": "yarn workspaces run prepare"
   },
   "workspaces": [
     "packages/*"
