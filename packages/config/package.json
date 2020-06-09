@@ -1,0 +1,31 @@
+{
+  "name": "semantic-commit-emoji-config",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "repository": "git@github.com:adambullmer/semantic-commit-emoji.git",
+  "homepage": "https://github.com/adambullmer/semantic-commit-emoji/tree/master/packages/commitlint-config#readme",
+  "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
+  "license": "GPL-3.0",
+  "private": false,
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "clean": "yarn clean:build && yarn clean:test",
+    "clean:build": "rm -rf dist types",
+    "clean:test": "rm -rf artifacts",
+    "prebuild": "yarn clean",
+    "build": "tsc",
+    "lint": "eslint *.ts --fix",
+    "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
+    "test": "echo 'No tests defined'",
+    "test:ci": "echo 'No tests defined'",
+    "prepare": "yarn build",
+    "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
+  },
+  "dependencies": {
+    "cosmiconfig": "^6.0.0"
+  },
+  "devDependencies": {}
+}
