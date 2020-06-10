@@ -1,90 +1,16 @@
-/**
- * Expected, known, and default list of semantic commit types. Not an exhaustive
- * list as extending this list may be possible with an external config file.
- */
-export type CommitType =
-  | "feat"
-  | "fix"
-  | "docs"
-  | "refactor"
-  | "style"
-  | "test"
-  | "perf"
-  | "hotfix"
-  | "locale"
-  | "ci"
-  | "chore"
-  | "types";
-
-/**
- * Expected, known, and github compatible emoji. Not an exhaustive list.
- */
-export type Emoji =
-  | "sparkles"
-  | "bug"
-  | "pencil"
-  | "recycle"
-  | "art"
-  | "microscope"
-  | "zap"
-  | "ambulance"
-  | "globe_with_meridians"
-  | "construction_worker"
-  | "wrench"
-  | "label"
-  | "bookmark"
-  | "rewind"
-  | "twisted_rightwards_arrows";
-
-/**
- * Known list of semantic commit types mapped to emoji.
- */
-export type BasicEmojiMap = {
-  [key in CommitType]: Emoji;
-};
-
-/**
- * While the base set of emoji can be enumerated, with the possibility of
- * unknown commit types types and emoji types, this provides a safe fallback
- * for the base syntax.
- */
-export type ExtendedEmojiMap = {
-  [key: string]: Emoji | string | undefined;
-};
-
-/**
- * Combined type of known and unknown semmantic commit type to emoji maps.
- */
-export type EmojiMap = BasicEmojiMap & ExtendedEmojiMap;
+import { Config } from "semantic-commit-emoji-config/types";
 
 // Special automatic commit overrides
 const versionEmoji = "bookmark";
 const revertEmoji = "rewind";
 const mergeEmoji = "twisted_rightwards_arrows";
 
-// Semantic commit to emoji map
-const typeEmojiMap: EmojiMap = {
-  feat: "sparkles",
-  fix: "bug",
-  docs: "pencil",
-  refactor: "recycle",
-  style: "art",
-  test: "microscope",
-  perf: "zap",
-  hotfix: "ambulance",
-  locale: "globe_with_meridians",
-  ci: "construction_worker",
-  chore: "wrench",
-  types: "label",
-};
-const allowedTypes = Object.keys(typeEmojiMap);
 const versionRegex = new RegExp(
   /^v?([0-9]+).([0-9]+).([0-9]+)(?:-([0-9a-z-]+(?:.[0-9a-z-]+)*))?(?:\+[0-9a-z-]+)?$/,
   "gi",
 );
 const revertRegex = new RegExp(/^revert(: | ")/, "gi");
 const mergeRegex = new RegExp(/^merge /, "gi");
-const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})(\\([^)]+\\))?!?:`, "i");
 
 /**
  * Prepends a corresponding emoji to a commit message and return the result.
@@ -94,11 +20,15 @@ const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")}
  * detected semantic commit message type to an emoji and prepend it to the original message.
  * If a match was not found, return the original message.
  */
-export default (commitString: string): string => {
+export default (config: Config, commitString: string): string => {
+  const allowedTypes = Object.keys(config.emojiMap);
+  const optionalSpace = config.withSpace ? " " : "";
+
+  const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})(\\([^)]+\\))?!?:`, "i");
   const [firstLine] = commitString.split("\n", 1);
 
-  function updateMessage(emoji: Emoji | string): string {
-    return `:${emoji}:${commitString}`;
+  function updateMessage(emoji: string): string {
+    return `:${emoji}:${optionalSpace}${commitString}`;
   }
 
   const versionMatch = firstLine.match(versionRegex);
@@ -126,7 +56,7 @@ export default (commitString: string): string => {
     return commitString;
   }
 
-  const emoji = typeEmojiMap[commitType];
+  const emoji = config.emojiMap[commitType];
   if (emoji === undefined) {
     return commitString;
   }
