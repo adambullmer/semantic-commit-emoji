@@ -1,12 +1,13 @@
 import { cosmiconfig } from "cosmiconfig";
-const explorer = cosmiconfig("semantic-commit-emoji");
 
-type EmojiMap = { [key: string]: string };
+export type EmojiMap = { [key: string]: string };
 
-interface Config {
+export interface Config {
   withSpace: boolean;
   emojiMap: EmojiMap;
 }
+
+const explorer = cosmiconfig("semantic-commit-emoji");
 
 const defaultConfig: Config = {
   withSpace: false,
@@ -26,7 +27,7 @@ const defaultConfig: Config = {
   },
 };
 
-export = async (path?: string): Promise<Config> => {
+export default async (path?: string): Promise<Config> => {
   const result = await (path === undefined ? explorer.search() : explorer.load(path));
   const config = Object.assign({}, defaultConfig, result?.config as Config);
 
