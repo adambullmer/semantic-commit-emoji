@@ -4,14 +4,14 @@ export type EmojiMap = { [key: string]: string };
 
 export interface Config {
   withSpace: boolean;
-  emojiMap: EmojiMap;
+  conventionalTypes: EmojiMap;
 }
 
 const explorer = cosmiconfig("semantic-commit-emoji");
 
 const defaultConfig: Config = {
   withSpace: false,
-  emojiMap: {
+  conventionalTypes: {
     feat: "sparkles",
     fix: "bug",
     docs: "pencil",
