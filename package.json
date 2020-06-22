@@ -2,22 +2,14 @@
   "name": "semantic-commit-emoji",
   "private": true,
   "scripts": {
-    "build": "yarn run build:config && yarn run build:commitlint-config && yarn run build:commitlint-plugin && yarn run build:cli",
-    "build:config": "yarn workspace semantic-commit-emoji-config run build",
-    "build:commitlint-config": "yarn workspace commitlint-config-semantic-commit-emoji run build",
-    "build:commitlint-plugin": "yarn workspace commitlint-plugin-semantic-commit-emoji run build",
-    "build:cli": "yarn workspace semantic-commit-emoji run build",
-    "lint:ci": "yarn workspaces run lint:ci",
-    "test:ci": "yarn workspaces run test:ci",
-    "prerelease": "yarn workspaces run build",
-    "release": "yarn workspaces run semantic-release",
+    "build": "wsrun --stages build",
+    "lint:ci": "wsrun lint:ci",
+    "test:ci": "wsrun test:ci",
+    "prerelease": "yarn build",
+    "release": "wsrun --serial semantic-release",
     "semantic-release": "semantic-release",
-    "postrelease": "yarn workspaces run release:tarball",
-    "prepare": "yarn run prepare:config && yarn run prepare:commitlint-config && yarn run prepare:commitlint-plugin && yarn run prepare:cli",
-    "prepare:config": "yarn workspace semantic-commit-emoji-config run prepare",
-    "prepare:commitlint-config": "yarn workspace commitlint-config-semantic-commit-emoji run prepare",
-    "prepare:commitlint-plugin": "yarn workspace commitlint-plugin-semantic-commit-emoji run prepare",
-    "prepare:cli": "yarn workspace semantic-commit-emoji run prepare"
+    "postrelease": "wsrun --stages release:tarball",
+    "prepare": "wsrun --stages prepare"
   },
   "workspaces": [
     "packages/*"
