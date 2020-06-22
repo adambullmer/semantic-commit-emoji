@@ -1,16 +1,13 @@
 import { Config } from "semantic-commit-emoji-config/types";
 
 // Special automatic commit overrides
-const versionEmoji = "bookmark";
-const revertEmoji = "rewind";
-const mergeEmoji = "twisted_rightwards_arrows";
-
 const versionRegex = new RegExp(
   /^v?([0-9]+).([0-9]+).([0-9]+)(?:-([0-9a-z-]+(?:.[0-9a-z-]+)*))?(?:\+[0-9a-z-]+)?$/,
   "gi",
 );
 const revertRegex = new RegExp(/^revert(: | ")/, "gi");
 const mergeRegex = new RegExp(/^merge /, "gi");
+const fixupRegex = new RegExp(/^fixup! /, "gi");
 
 /**
  * Prepends a corresponding emoji to a commit message and return the result.
@@ -33,17 +30,22 @@ export default (config: Config, commitString: string): string => {
 
   const versionMatch = firstLine.match(versionRegex);
   if (versionMatch !== null) {
-    return updateMessage(versionEmoji);
+    return updateMessage(config.automaticTypes.version);
   }
 
   const mergeMatach = firstLine.match(mergeRegex);
   if (mergeMatach !== null) {
-    return updateMessage(mergeEmoji);
+    return updateMessage(config.automaticTypes.merge);
   }
 
   const revertMatach = firstLine.match(revertRegex);
   if (revertMatach !== null) {
-    return updateMessage(revertEmoji);
+    return updateMessage(config.automaticTypes.revert);
+  }
+
+  const fixupMatach = firstLine.match(fixupRegex);
+  if (fixupMatach !== null) {
+    return updateMessage(config.automaticTypes.fixup);
   }
 
   const match = firstLine.match(semanticEmojiRegex);
