@@ -25,7 +25,9 @@ export default (config: Config, commitString: string): string => {
   const [firstLine] = commitString.split("\n", 1);
 
   function updateMessage(emoji: string): string {
-    return `:${emoji}:${optionalSpace}${commitString}`;
+    const emojiPrefix = emoji !== "" ? `:${emoji}:${optionalSpace}` : "";
+
+    return emojiPrefix + commitString;
   }
 
   const versionMatch = firstLine.match(versionRegex);
