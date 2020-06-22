@@ -25,6 +25,7 @@
     "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "dependencies": {
+    "@endemolshinegroup/cosmiconfig-typescript-loader": "^3.0.0",
     "cosmiconfig": "^6.0.0"
   },
   "devDependencies": {}
