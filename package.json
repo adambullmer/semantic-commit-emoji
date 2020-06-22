@@ -13,7 +13,11 @@
     "release": "yarn workspaces run semantic-release",
     "semantic-release": "semantic-release",
     "postrelease": "yarn workspaces run release:tarball",
-    "prepare": "yarn workspaces run prepare"
+    "prepare": "yarn run prepare:config && yarn run prepare:commitlint-config && yarn run prepare:commitlint-plugin && yarn run prepare:cli",
+    "prepare:config": "yarn workspace semantic-commit-emoji-config run prepare",
+    "prepare:commitlint-config": "yarn workspace commitlint-config-semantic-commit-emoji run prepare",
+    "prepare:commitlint-plugin": "yarn workspace commitlint-plugin-semantic-commit-emoji run prepare",
+    "prepare:cli": "yarn workspace semantic-commit-emoji run prepare"
   },
   "workspaces": [
     "packages/*"
