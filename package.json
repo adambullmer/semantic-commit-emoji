@@ -30,6 +30,7 @@
     "commitlint-plugin-semantic-commit-emoji": "*",
     "husky": "^3.1.0",
     "semantic-release": "^17.0.8",
-    "semantic-release-monorepo": "^7.0.2"
+    "semantic-release-monorepo": "^7.0.2",
+    "wsrun": "^5.2.1"
   }
 }
