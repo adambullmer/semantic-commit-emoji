@@ -21,7 +21,7 @@ const mergeRegex = new RegExp(/^merge /, "gi");
  * If a match was not found, return the original message.
  */
 export default (config: Config, commitString: string): string => {
-  const allowedTypes = Object.keys(config.emojiMap);
+  const allowedTypes = Object.keys(config.conventionalTypes);
   const optionalSpace = config.withSpace ? " " : "";
 
   const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})(\\([^)]+\\))?!?:`, "i");
@@ -56,7 +56,7 @@ export default (config: Config, commitString: string): string => {
     return commitString;
   }
 
-  const emoji = config.emojiMap[commitType];
+  const emoji = config.conventionalTypes[commitType];
   if (emoji === undefined) {
     return commitString;
   }
