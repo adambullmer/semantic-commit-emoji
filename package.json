@@ -2,7 +2,7 @@
   "name": "semantic-commit-emoji",
   "private": true,
   "scripts": {
-    "build": "wsrun --stages build",
+    "build": "wsrun --fast-exit --stages build",
     "lint:ci": "wsrun lint:ci",
     "test:ci": "wsrun test:ci",
     "prerelease": "yarn build",
