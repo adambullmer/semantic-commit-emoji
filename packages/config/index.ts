@@ -1,4 +1,5 @@
 import { cosmiconfig } from "cosmiconfig";
+import TypescriptLoader from "@endemolshinegroup/cosmiconfig-typescript-loader";
 
 export type EmojiMap = { [key: string]: string };
 
@@ -15,7 +16,23 @@ export interface Config {
   conventionalTypes: EmojiMap;
 }
 
-const explorer = cosmiconfig("semantic-commit-emoji");
+const moduleName = "semantic-commit-emoji";
+const explorer = cosmiconfig(moduleName, {
+  searchPlaces: [
+    "package.json",
+    `.${moduleName}rc`,
+    `.${moduleName}rc.json`,
+    `.${moduleName}rc.yaml`,
+    `.${moduleName}rc.yml`,
+    `.${moduleName}rc.ts`,
+    `.${moduleName}rc.js`,
+    `${moduleName}.config.ts`,
+    `${moduleName}.config.js`,
+  ],
+  loaders: {
+    ".ts": TypescriptLoader,
+  },
+});
 
 const defaultConfig: Config = {
   withSpace: false,
