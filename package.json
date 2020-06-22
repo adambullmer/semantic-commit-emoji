@@ -2,7 +2,11 @@
   "name": "semantic-commit-emoji",
   "private": true,
   "scripts": {
-    "build": "yarn workspaces run build",
+    "build": "yarn run build:config && yarn run build:commitlint-config && yarn run build:commitlint-plugin && yarn run build:cli",
+    "build:config": "yarn workspace semantic-commit-emoji-config run build",
+    "build:commitlint-config": "yarn workspace commitlint-config-semantic-commit-emoji run build",
+    "build:commitlint-plugin": "yarn workspace commitlint-plugin-semantic-commit-emoji run build",
+    "build:cli": "yarn workspace semantic-commit-emoji run build",
     "lint:ci": "yarn workspaces run lint:ci",
     "test:ci": "yarn workspaces run test:ci",
     "prerelease": "yarn workspaces run build",
