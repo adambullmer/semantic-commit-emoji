@@ -8,7 +8,7 @@
     "prerelease": "yarn build",
     "release": "wsrun --serial semantic-release",
     "semantic-release": "semantic-release",
-    "postrelease": "wsrun --stages release:tarball",
+    "postrelease": "yarn workspaces run release:tarball",
     "prepare": "wsrun --stages prepare"
   },
   "workspaces": [
