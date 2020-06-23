@@ -1,5 +1,5 @@
 {
-  "name": "semantic-commit-emoji",
+  "name": "root",
   "private": true,
   "scripts": {
     "build": "wsrun --fast-exit --stages build",
