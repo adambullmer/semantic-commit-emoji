@@ -1160,7 +1160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/commit-analyzer@npm:^8.0.0":
+"@semantic-release/commit-analyzer@npm:^8.0.0, @semantic-release/commit-analyzer@npm:^8.0.1":
   version: 8.0.1
   resolution: "@semantic-release/commit-analyzer@npm:8.0.1"
   dependencies:
@@ -1202,7 +1202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^7.0.0":
+"@semantic-release/github@npm:^7.0.0, @semantic-release/github@npm:^7.0.7":
   version: 7.0.7
   resolution: "@semantic-release/github@npm:7.0.7"
   dependencies:
@@ -1228,7 +1228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:^7.0.0":
+"@semantic-release/npm@npm:^7.0.0, @semantic-release/npm@npm:^7.0.5":
   version: 7.0.5
   resolution: "@semantic-release/npm@npm:7.0.5"
   dependencies:
@@ -1251,7 +1251,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/release-notes-generator@npm:^9.0.0":
+"@semantic-release/release-notes-generator@npm:^9.0.0, @semantic-release/release-notes-generator@npm:^9.0.1":
   version: 9.0.1
   resolution: "@semantic-release/release-notes-generator@npm:9.0.1"
   dependencies:
@@ -2992,6 +2992,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"compare-func@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "compare-func@npm:2.0.0"
+  dependencies:
+    array-ify: ^1.0.0
+    dot-prop: ^5.1.0
+  checksum: 825690b828f028acf270578cd4d9ea0751987b474095cd47093a29ac087a21e5de2db86b83cc0cecb935dfca952ba8bbcd7ead240fe6b3b7ecb1a66a8b109d28
+  languageName: node
+  linkType: hard
+
 "compare-versions@npm:^3.6.0":
   version: 3.6.0
   resolution: "compare-versions@npm:3.6.0"
@@ -3084,6 +3094,17 @@ __metadata:
     lodash: ^4.2.1
     q: ^1.5.1
   checksum: 72e7e1c8b004ef4bdd514fd26945edc5c17caa3086f8a6132dcbf8db911a777640c240bde4e1a3c489c307036b2cf34133371270cc9350f58b39a8b116e5242d
+  languageName: node
+  linkType: hard
+
+"conventional-changelog-conventionalcommits@npm:^4.3.0":
+  version: 4.3.1
+  resolution: "conventional-changelog-conventionalcommits@npm:4.3.1"
+  dependencies:
+    compare-func: ^2.0.0
+    lodash: ^4.17.15
+    q: ^1.5.1
+  checksum: cea02d7ca168e94d5cd759f129367d2787ceca48268b7879e7f9c52341d0ab3eaee5b53faf13b12e7dd446541a2bfedf8bc81d49765ee95af519d950bd780193
   languageName: node
   linkType: hard
 
@@ -3606,6 +3627,15 @@ __metadata:
   dependencies:
     is-obj: ^1.0.0
   checksum: 6dadca2215c4844f8313828a67f4398c87e1dae263a111aa7e9255aecf31647bb4a6e80efdd7a768bb170d47c96265bb744ff659dbf1aa7c8c78d4cfe69be20c
+  languageName: node
+  linkType: hard
+
+"dot-prop@npm:^5.1.0":
+  version: 5.2.0
+  resolution: "dot-prop@npm:5.2.0"
+  dependencies:
+    is-obj: ^2.0.0
+  checksum: d2f62e0b5ec467edb8e278ab6070955f0a4aec973ec1fa837ff6152f3cdd96cd2a04c7e2626cb3eac4f639b8f6786b5b87d3c01df7ba729693c636cb78b7ae93
   languageName: node
   linkType: hard
 
@@ -5494,6 +5524,13 @@ fsevents@^2.1.2:
   version: 1.0.1
   resolution: "is-obj@npm:1.0.1"
   checksum: 0913a3bb6424d6bfb37e2daa5ef4a5d31a388b0f5a53f36bbe1fd95f1264efe92c6fd87a5c3f41e25b3db42fe60924fe6ae1f0efb274375b090fd093a5301ccf
+  languageName: node
+  linkType: hard
+
+"is-obj@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "is-obj@npm:2.0.0"
+  checksum: ffa67ed5df66e37757876cd976380737a0430551789a0457b8c031eaedef8f5c6bc4ab6d903e529efb777545f8718ab73d9badde61c8b08720a3747ccff0b2a0
   languageName: node
   linkType: hard
 
@@ -9395,12 +9432,17 @@ fsevents@^2.1.2:
   dependencies:
     "@commitlint/cli": ^8.3.5
     "@commitlint/config-conventional": ^8.3.4
+    "@semantic-release/commit-analyzer": ^8.0.1
     "@semantic-release/git": ^9.0.0
+    "@semantic-release/github": ^7.0.7
+    "@semantic-release/npm": ^7.0.5
+    "@semantic-release/release-notes-generator": ^9.0.1
     "@typescript-eslint/eslint-plugin": ^3.4.0
     "@typescript-eslint/parser": ^3.4.0
     "@yarnpkg/pnpify": ^2.0.0-rc.25
     commitlint-config-semantic-commit-emoji: "workspace:*"
     commitlint-plugin-semantic-commit-emoji: "workspace:*"
+    conventional-changelog-conventionalcommits: ^4.3.0
     eslint: ^7.3.1
     eslint-config-prettier: ^6.9.0
     eslint-plugin-prettier: ^3.1.4
