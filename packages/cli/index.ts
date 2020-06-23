@@ -1,4 +1,4 @@
-import { Config } from "semantic-commit-emoji-config/types";
+import { Config } from "semantic-commit-emoji-config";
 
 // Special automatic commit overrides
 const versionRegex = new RegExp(

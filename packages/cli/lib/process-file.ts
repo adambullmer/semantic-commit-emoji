@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import processCommitMessage from "../index";
-import { Config } from "semantic-commit-emoji-config/types";
+import { Config } from "semantic-commit-emoji-config";
 
 /**
  * Synchronously read in a string from the provided file, sends the contents
