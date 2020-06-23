@@ -970,17 +970,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:^24.9.0":
-  version: 24.9.0
-  resolution: "@jest/types@npm:24.9.0"
-  dependencies:
-    "@types/istanbul-lib-coverage": ^2.0.0
-    "@types/istanbul-reports": ^1.1.1
-    "@types/yargs": ^13.0.0
-  checksum: 7cd388ad9d3a6de7e0ca29cbaf34dd9da9f6485d26747fc2ef6732bf06dc98d79519b7f3684b7287bd6d5168c394d8f806dc1343bd3c1b3cdc3e85486a518c63
-  languageName: node
-  linkType: hard
-
 "@jest/types@npm:^25.5.0":
   version: 25.5.0
   resolution: "@jest/types@npm:25.5.0"
@@ -1492,15 +1481,6 @@ __metadata:
   version: 15.0.0
   resolution: "@types/yargs-parser@npm:15.0.0"
   checksum: 74bfaefde90fb28eace49469fa6c2da63161176cb6dfbd2cfea2c3cb3268e4ca6abe174ae3ff7e633a49a6d6d1a114901c78799a19d0cbc5a9b539585afe6c4f
-  languageName: node
-  linkType: hard
-
-"@types/yargs@npm:^13.0.0":
-  version: 13.0.9
-  resolution: "@types/yargs@npm:13.0.9"
-  dependencies:
-    "@types/yargs-parser": "*"
-  checksum: b8afeb2c6cf42d5a6a1ddf4753a6b29c6fefcd708ba32f8316926e73877937b8fecf4029f97bb45a52a2250a8059c051532fae3398937fc2104e63903c52548e
   languageName: node
   linkType: hard
 
@@ -2426,7 +2406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:2.4.2, chalk@npm:^2.0.0, chalk@npm:^2.0.1, chalk@npm:^2.3.0, chalk@npm:^2.3.2":
+"chalk@npm:2.4.2, chalk@npm:^2.0.0, chalk@npm:^2.0.1, chalk@npm:^2.3.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -2579,17 +2559,6 @@ __metadata:
     strip-ansi: ^4.0.0
     wrap-ansi: ^2.0.0
   checksum: 401b0719e79fbe23c008cd9bcd1f0e80792d8b52f563ee0886410c7509ea69584239162234eac6ab38b36c9567764bec536779241ec4c15ca8f9e5fd7cdb7e75
-  languageName: node
-  linkType: hard
-
-"cliui@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "cliui@npm:5.0.0"
-  dependencies:
-    string-width: ^3.1.0
-    strip-ansi: ^5.2.0
-    wrap-ansi: ^5.1.0
-  checksum: 25e61dc985279bd7ec16715df53288346e5c36ff43956f7de31bf55b2432ce1259e75148b28c3ed41265caf1baee1d204363c429ae5fee54e6f78bed5a5d82b3
   languageName: node
   linkType: hard
 
@@ -5430,17 +5399,6 @@ fsevents@^2.1.2:
   version: 1.0.2
   resolution: "java-properties@npm:1.0.2"
   checksum: 6712ee3e5de7744dbe9f43efc4cecad30d43366ad40b419b6da262a60414f8ae49b1fea38d9e70e7ba81799c9d59b00467b4f7794a81d5096fd7ffae1764f59d
-  languageName: node
-  linkType: hard
-
-"jest-changed-files@npm:^24.9.0":
-  version: 24.9.0
-  resolution: "jest-changed-files@npm:24.9.0"
-  dependencies:
-    "@jest/types": ^24.9.0
-    execa: ^1.0.0
-    throat: ^4.0.0
-  checksum: cd341b76fa05b94dece212afd819b68f84408fe21e784bd08d7da88dfb155682d92b3573fb3b90d2e87bbbfa09c077d4bfc4fbfcb48c6c69a741fc6c1471f602
   languageName: node
   linkType: hard
 
@@ -8944,7 +8902,6 @@ fsevents@^2.1.2:
     semantic-commit-emoji-config: "*"
     semantic-release: ^17.0.8
     semantic-release-monorepo: ^7.0.2
-    wsrun: ^5.2.1
   languageName: unknown
   linkType: soft
 
@@ -9518,7 +9475,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"split@npm:^1.0.0, split@npm:^1.0.1":
+"split@npm:^1.0.0":
   version: 1.0.1
   resolution: "split@npm:1.0.1"
   dependencies:
@@ -9665,7 +9622,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"string-width@npm:^3.0.0, string-width@npm:^3.1.0":
+"string-width@npm:^3.0.0":
   version: 3.1.0
   resolution: "string-width@npm:3.1.0"
   dependencies:
@@ -9757,7 +9714,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:^5.0.0, strip-ansi@npm:^5.1.0, strip-ansi@npm:^5.2.0":
+"strip-ansi@npm:^5.1.0, strip-ansi@npm:^5.2.0":
   version: 5.2.0
   resolution: "strip-ansi@npm:5.2.0"
   dependencies:
@@ -9969,13 +9926,6 @@ fsevents@^2.1.2:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: 373904ce70524ba11ec7e1905c44fb92671132d5e0b0aba2fb48057161f8bf9cbf7f6178f0adf31810150cf44fb52c7b912dc722bff3fddf9688378596dbeb56
-  languageName: node
-  linkType: hard
-
-"throat@npm:^4.0.0, throat@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "throat@npm:4.1.0"
-  checksum: 91326ef6842bd3d8d39ac104fbcb8998c911deacc639ae2de8522bbb1e526e6db4263927ad1eec71f1d31e7cec111a501371f67514ec449f517f7357814eda55
   languageName: node
   linkType: hard
 
@@ -10741,17 +10691,6 @@ typescript@^3.9.5:
   languageName: node
   linkType: hard
 
-"wrap-ansi@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "wrap-ansi@npm:5.1.0"
-  dependencies:
-    ansi-styles: ^3.2.0
-    string-width: ^3.0.0
-    strip-ansi: ^5.0.0
-  checksum: 9622c3aa2742645e9a6941d297436a433c65ffe1b1416578ad56e0df657716bda6857401c5c9cc485c0abbc04e852aafedf295d87e2d6ec58a01799d6bcb2fdf
-  languageName: node
-  linkType: hard
-
 "wrap-ansi@npm:^6.2.0":
   version: 6.2.0
   resolution: "wrap-ansi@npm:6.2.0"
@@ -10814,25 +10753,6 @@ typescript@^3.9.5:
     utf-8-validate:
       optional: true
   checksum: c1f386013bd30afa9e4d0aa28eee85767a9e1b8fa74fc482eac503840f1012c2c1339745be36b0737f0245515646892b6073e376deac911a7bdf1ec90fc0f86f
-  languageName: node
-  linkType: hard
-
-"wsrun@npm:^5.2.1":
-  version: 5.2.1
-  resolution: "wsrun@npm:5.2.1"
-  dependencies:
-    bluebird: ^3.5.1
-    chalk: ^2.3.0
-    glob: ^7.1.2
-    jest-changed-files: ^24.9.0
-    lodash: ^4.17.4
-    minimatch: ^3.0.4
-    split: ^1.0.1
-    throat: ^4.1.0
-    yargs: ^13.0.0
-  bin:
-    wsrun: ./bin/wsrun.js
-  checksum: 4f70819c7ea318a9e166c916db36118f7cbe37c7662a6c62f428c85c0fa2117df6ff20cd77af15a134130b066e3eed17f5a1550bca49d04c4a8411132e24a896
   languageName: node
   linkType: hard
 
@@ -10932,16 +10852,6 @@ typescript@^3.9.5:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^13.1.2":
-  version: 13.1.2
-  resolution: "yargs-parser@npm:13.1.2"
-  dependencies:
-    camelcase: ^5.0.0
-    decamelize: ^1.2.0
-  checksum: 82d3b7ab99085d70a5121399ad407d2b98d296538bf7012ac2ce044a61160ca891ea617de6374699d81955d9a61c36a3b2a6a51588e38f710bd211ce2e63c33c
-  languageName: node
-  linkType: hard
-
 "yargs-parser@npm:^7.0.0":
   version: 7.0.0
   resolution: "yargs-parser@npm:7.0.0"
@@ -10977,24 +10887,6 @@ typescript@^3.9.5:
     y18n: ^3.2.1
     yargs-parser: ^9.0.2
   checksum: 013be33991707357c755764ed5e200735f81fa076ea2eea78d3d58ac7e98e6c28ef25feaee011d7e6423cda890a7916a50debe56d97a1a97b5e378c70749e947
-  languageName: node
-  linkType: hard
-
-"yargs@npm:^13.0.0":
-  version: 13.3.2
-  resolution: "yargs@npm:13.3.2"
-  dependencies:
-    cliui: ^5.0.0
-    find-up: ^3.0.0
-    get-caller-file: ^2.0.1
-    require-directory: ^2.1.1
-    require-main-filename: ^2.0.0
-    set-blocking: ^2.0.0
-    string-width: ^3.0.0
-    which-module: ^2.0.0
-    y18n: ^4.0.0
-    yargs-parser: ^13.1.2
-  checksum: 92c612cd14a9217d7421ae4f42bc7c460472633bfc2e45f7f86cd614a61a845670d3bac7c2228c39df7fcecce0b8c12b2af65c785b1f757de974dcf84b5074f9
   languageName: node
   linkType: hard
 

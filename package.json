@@ -2,14 +2,14 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "wsrun --fast-exit --stages build",
-    "lint:ci": "wsrun lint:ci",
-    "test:ci": "wsrun test:ci",
+    "build": "yarn workspaces foreach --verbose --parallel --topological run build",
+    "lint:ci": "yarn workspaces foreach --verbose --parallel run lint:ci",
+    "test:ci": "yarn workspaces foreach --verbose --parallel run test:ci",
     "prerelease": "yarn build",
-    "release": "wsrun --serial semantic-release",
+    "release": "yarn workspaces foreach run semantic-release",
     "semantic-release": "semantic-release",
-    "postrelease": "yarn workspaces run release:tarball",
-    "prepare": "wsrun --stages ws:prepare"
+    "postrelease": "yarn workspaces foreach run release:tarball",
+    "prepare": "yarn workspaces foreach --parallel --topological ws:prepare"
   },
   "workspaces": [
     "packages/*"
@@ -23,7 +23,6 @@
     "husky": "^4.2.5",
     "semantic-commit-emoji-config": "*",
     "semantic-release": "^17.0.8",
-    "semantic-release-monorepo": "^7.0.2",
-    "wsrun": "^5.2.1"
+    "semantic-release-monorepo": "^7.0.2"
   }
 }
