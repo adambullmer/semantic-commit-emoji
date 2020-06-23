@@ -18,7 +18,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: yarn install, test, and build
         run: |
-          yarn install
+          yarn install --immutable
           yarn lint:ci
           yarn test:ci
         env:
@@ -40,7 +40,7 @@ jobs:
           node-version: 12.x
       - name: yarn install, test, and build
         run: |
-          yarn install
+          yarn install --immutable
           yarn build
         env:
           CI: true
