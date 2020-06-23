@@ -21,7 +21,7 @@
     "lint:ci": "eslint *.ts --format junit --output-file ../../artifacts/lint-results.xml",
     "test": "echo 'No tests defined'",
     "test:ci": "echo 'No tests defined'",
-    "prepare": "yarn build",
+    "ws:prepare": "yarn build",
     "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "dependencies": {

@@ -22,7 +22,7 @@
     "lint:ci": "eslint *.ts {lib,tests}/**/*.ts --format junit --output-file ../../artifacts/lint-results.xml",
     "test": "jest --reporters=default",
     "test:ci": "jest --ci --runInBand --coverage",
-    "prepare": "yarn build",
+    "ws:prepare": "yarn build",
     "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "dependencies": {

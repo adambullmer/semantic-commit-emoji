@@ -9,7 +9,7 @@
     "release": "wsrun --serial semantic-release",
     "semantic-release": "semantic-release",
     "postrelease": "yarn workspaces run release:tarball",
-    "prepare": "wsrun --stages prepare"
+    "prepare": "wsrun --stages ws:prepare"
   },
   "workspaces": [
     "packages/*"
