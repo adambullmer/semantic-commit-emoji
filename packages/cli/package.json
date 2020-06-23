@@ -25,7 +25,7 @@
     "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "dependencies": {
-    "semantic-commit-emoji-config": "*"
+    "semantic-commit-emoji-config": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",

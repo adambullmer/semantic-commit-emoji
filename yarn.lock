@@ -9536,7 +9536,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"semantic-commit-emoji-config@*, semantic-commit-emoji-config@workspace:*, semantic-commit-emoji-config@workspace:packages/config":
+"semantic-commit-emoji-config@workspace:*, semantic-commit-emoji-config@workspace:packages/config":
   version: 0.0.0-use.local
   resolution: "semantic-commit-emoji-config@workspace:packages/config"
   dependencies:
@@ -9571,7 +9571,7 @@ fsevents@^2.1.2:
     jest: ^26.0.1
     jest-junit: ^11.0.1
     prettier: ^2.0.5
-    semantic-commit-emoji-config: "*"
+    semantic-commit-emoji-config: "workspace:*"
     ts-jest: ^26.1.1
     typescript: ^3.9.5
   bin:
