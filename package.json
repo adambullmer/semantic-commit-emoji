@@ -2,14 +2,14 @@
   "name": "semantic-commit-emoji",
   "private": true,
   "scripts": {
-    "build": "yarn workspaces run build",
-    "lint:ci": "yarn workspaces run lint:ci",
-    "test:ci": "yarn workspaces run test:ci",
-    "prerelease": "yarn workspaces run build",
-    "release": "yarn workspaces run semantic-release",
+    "build": "wsrun --fast-exit --stages build",
+    "lint:ci": "wsrun lint:ci",
+    "test:ci": "wsrun test:ci",
+    "prerelease": "yarn build",
+    "release": "wsrun --serial semantic-release",
     "semantic-release": "semantic-release",
-    "postrelease": "yarn workspaces run release:tarball",
-    "prepare": "yarn workspaces run prepare"
+    "postrelease": "wsrun --stages release:tarball",
+    "prepare": "wsrun --stages prepare"
   },
   "workspaces": [
     "packages/*"
@@ -22,6 +22,7 @@
     "commitlint-plugin-semantic-commit-emoji": "*",
     "husky": "^3.1.0",
     "semantic-release": "^17.0.8",
-    "semantic-release-monorepo": "^7.0.2"
+    "semantic-release-monorepo": "^7.0.2",
+    "wsrun": "^5.2.1"
   }
 }

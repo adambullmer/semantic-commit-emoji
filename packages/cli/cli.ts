@@ -5,7 +5,10 @@
  * and call the correct processor.
  */
 import processFile from "./lib/process-file";
+import loadConfig from "semantic-commit-emoji-config";
 
 const [, , filePath] = process.argv;
 
-processFile(filePath);
+loadConfig().then((config) => {
+  processFile(config, filePath);
+});

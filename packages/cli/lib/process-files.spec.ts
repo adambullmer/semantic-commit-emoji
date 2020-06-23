@@ -1,5 +1,21 @@
 import processFile from "./process-file";
+import { Config } from "semantic-commit-emoji-config";
 import * as fs from "fs";
+
+const config: Config = {
+  withSpace: false,
+  automaticTypes: {
+    fixup: "",
+    revert: "rewind",
+    merge: "twisted_rightwards_arrows",
+    version: "bookmark",
+  },
+  conventionalTypes: {
+    feat: "sparkles",
+    fix: "bug",
+    chore: "wrench",
+  },
+};
 
 const fileName = "/path/to/file";
 const fileName2 = "/path/to/another/file";
@@ -15,7 +31,7 @@ const formatMap: { [key: string]: string | undefined } = {
 };
 jest.mock("fs");
 jest.mock("../index", () => {
-  return (input: string): string | undefined => formatMap[input];
+  return (_: Config, input: string): string | undefined => formatMap[input];
 });
 
 describe("process-files.ts", () => {
@@ -39,17 +55,18 @@ describe("process-files.ts", () => {
   });
 
   it("reads from the right file", () => {
-    processFile(fileName);
+    processFile(config, fileName);
     expect(readSpy).toHaveBeenCalledWith(fileName, "utf8");
   });
 
   it("writes to the right file, with the right content", () => {
-    processFile(fileName);
+    processFile(config, fileName);
+    expect(writeSpy).toHaveBeenCalled();
     expect(writeSpy).toHaveBeenCalledWith(fileName, emojiPrefix + fileContents);
   });
 
   it("Doesn't write when the processor returns undefined", () => {
-    processFile(fileName2);
+    processFile(config, fileName2);
     expect(writeSpy).not.toHaveBeenCalled();
   });
 });
