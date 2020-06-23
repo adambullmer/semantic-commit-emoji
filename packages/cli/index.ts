@@ -8,6 +8,7 @@ const versionRegex = new RegExp(
 const revertRegex = new RegExp(/^revert(: | ")/, "gi");
 const mergeRegex = new RegExp(/^merge /, "gi");
 const fixupRegex = new RegExp(/^fixup! /, "gi");
+const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?([^!:]+)(\\([^)]+\\))?!?:`, "i");
 
 /**
  * Prepends a corresponding emoji to a commit message and return the result.
@@ -18,10 +19,7 @@ const fixupRegex = new RegExp(/^fixup! /, "gi");
  * If a match was not found, return the original message.
  */
 export default (config: Config, commitString: string): string => {
-  const allowedTypes = Object.keys(config.conventionalTypes);
   const optionalSpace = config.withSpace ? " " : "";
-
-  const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?(${allowedTypes.join("|")})(\\([^)]+\\))?!?:`, "i");
   const [firstLine] = commitString.split("\n", 1);
 
   function updateMessage(emoji: string): string {
@@ -60,10 +58,7 @@ export default (config: Config, commitString: string): string => {
     return commitString;
   }
 
-  const emoji = config.conventionalTypes[commitType];
-  if (emoji === undefined) {
-    return commitString;
-  }
+  const emoji = config.conventionalTypes[commitType] ?? "";
 
   return updateMessage(emoji);
 };
