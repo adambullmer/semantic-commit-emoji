@@ -92,6 +92,8 @@ If you want this hook to run with other `commit-message` or `prepare-commit-mess
 
 # If globally installed module
 commit-message-emoji "$@"
+# Or yarn v2 global replacement
+yarn dlx semantic-commit-emoji "$@"
 # Or if localy installed module
 npx commit-message-emoji "$@"
 ```
