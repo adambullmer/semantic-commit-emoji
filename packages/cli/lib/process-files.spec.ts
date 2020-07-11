@@ -1,3 +1,5 @@
+/// <reference types="node" />
+/// <reference types="@types/jest" />
 import processFile from "./process-file";
 import { Config } from "semantic-commit-emoji-config";
 import * as fs from "fs";

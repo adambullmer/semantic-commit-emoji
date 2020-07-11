@@ -1,4 +1,4 @@
-import { Config } from "semantic-commit-emoji-config/types";
+import { Config } from "semantic-commit-emoji-config";
 
 // Special automatic commit overrides
 const versionRegex = new RegExp(
@@ -8,7 +8,7 @@ const versionRegex = new RegExp(
 const revertRegex = new RegExp(/^revert(: | ")/, "gi");
 const mergeRegex = new RegExp(/^merge /, "gi");
 const fixupRegex = new RegExp(/^fixup! /, "gi");
-const semanticEmojiRegex = new RegExp(`^(:[a-z]{3,}:)?([^!:]+)(\\([^)]+\\))?!?:`, "i");
+const semanticEmojiRegex = new RegExp(/^(?::([^:])+:\s*)?(\w*)(?:\((.*)\))?!?: (.*)$/, "i");
 
 /**
  * Prepends a corresponding emoji to a commit message and return the result.

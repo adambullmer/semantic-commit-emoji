@@ -1,3 +1,4 @@
+/// <reference types="@types/jest" />
 import index from "./index";
 import { Config } from "semantic-commit-emoji-config";
 

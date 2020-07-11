@@ -8,7 +8,6 @@
   "homepage": "https://github.com/adambullmer/semantic-commit-emoji/tree/master/packages/cli#readme",
   "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
   "license": "GPL-3.0",
-  "private": false,
   "engines": {
     "node": ">=8"
   },
@@ -26,7 +25,7 @@
     "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
   },
   "dependencies": {
-    "semantic-commit-emoji-config": "*"
+    "semantic-commit-emoji-config": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",

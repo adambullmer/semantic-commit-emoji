@@ -1,15 +1,15 @@
 {
-  "name": "semantic-commit-emoji",
+  "name": "root",
   "private": true,
   "scripts": {
-    "build": "wsrun --fast-exit --stages build",
-    "lint:ci": "wsrun lint:ci",
-    "test:ci": "wsrun test:ci",
+    "build": "yarn workspaces foreach --verbose --parallel --topological run build",
+    "lint:ci": "yarn workspaces foreach --verbose --parallel run lint:ci",
+    "test:ci": "yarn workspaces foreach --verbose --parallel run test:ci",
     "prerelease": "yarn build",
-    "release": "wsrun --serial semantic-release",
+    "release": "yarn workspaces foreach run semantic-release",
     "semantic-release": "semantic-release",
-    "postrelease": "yarn workspaces run release:tarball",
-    "prepare": "wsrun --stages ws:prepare"
+    "postrelease": "yarn workspaces foreach run release:tarball",
+    "prepare": "yarn workspaces foreach --parallel --topological ws:prepare"
   },
   "workspaces": [
     "packages/*"
@@ -17,13 +17,26 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
-    "commitlint-config-semantic-commit-emoji": "*",
-    "commitlint-plugin-semantic-commit-emoji": "*",
+    "@semantic-release/github": "^7.0.7",
+    "@semantic-release/npm": "^7.0.5",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "@yarnpkg/pnpify": "^2.0.0-rc.25",
+    "commitlint-config-semantic-commit-emoji": "workspace:*",
+    "commitlint-plugin-semantic-commit-emoji": "workspace:*",
+    "conventional-changelog-conventionalcommits": "^4.3.0",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
-    "semantic-commit-emoji-config": "*",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "semantic-commit-emoji-config": "workspace:*",
     "semantic-release": "^17.0.8",
     "semantic-release-monorepo": "^7.0.2",
-    "wsrun": "^5.2.1"
+    "typescript": "^3.9.5"
   }
 }
