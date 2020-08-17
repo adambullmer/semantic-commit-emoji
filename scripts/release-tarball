@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -eo pipefail
+
+release_dir="$(pwd)/artifacts/package"
+package=""
+if [[ -d "$release_dir" ]]
+then
+  package=`ls -t $release_dir/*.tgz | head -1`
+fi
+
+if [[ -n "$package" ]]
+then
+  echo "Publishing '$package'"
+  npm publish $package
+else
+  echo "Nothing to release"
+fi

@@ -22,7 +22,7 @@
     "test:ci": "jest --ci --runInBand --coverage",
     "ws:prepare": "yarn build",
     "release": "semantic-release",
-    "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
+    "release:tarball": "yarn exec ../../scripts/release-tarball"
   },
   "dependencies": {
     "semantic-commit-emoji-config": "workspace:*"

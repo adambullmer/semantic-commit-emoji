@@ -21,7 +21,7 @@
     "test:ci": "echo 'No tests defined'",
     "ws:prepare": "yarn build",
     "release": "semantic-release",
-    "release:tarball": "test ! -d artifacts/package || npm publish $(ls -t artifacts/package/*.tgz | head -1)"
+    "release:tarball": "yarn exec ../../scripts/release-tarball"
   },
   "devDependencies": {
     "@commitlint/types": "^9.0.0",
