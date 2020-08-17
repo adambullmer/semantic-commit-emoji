@@ -6,7 +6,7 @@
     "lint:ci": "yarn workspaces foreach --verbose --parallel run lint:ci",
     "test:ci": "yarn workspaces foreach --verbose --parallel run test:ci",
     "prerelease": "yarn build",
-    "release": "yarn workspaces foreach --verbose --topological run release",
+    "release": "yarn workspaces foreach --verbose --topological run release && yarn postrelease",
     "postrelease": "yarn workspaces foreach --verbose --topological run release:tarball",
     "prepare": "yarn workspaces foreach --parallel --topological ws:prepare"
   },
