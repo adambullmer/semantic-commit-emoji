@@ -47,7 +47,7 @@ The list of current message types and their used emoji
 | locale   | :globe_with_meridians: `:globe_with_meridians:` |
 | ci       | :construction_worker: `:construction_worker:`   |
 | chore    | :wrench: `:wrench:`                             |
-| typing   | :label: `:label:`                               |
+| types    | :label: `:label:`                               |
 
 ## Installation
 
