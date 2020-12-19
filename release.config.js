@@ -47,7 +47,7 @@ module.exports = {
       "@semantic-release/git",
       {
         assets: ["package.json"],
-        message: ":wrench:chore: Release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+        message: ":bookmark:chore: Release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
     [

@@ -11,5 +11,7 @@ module.exports = {
   rules: {
     "subject-case": [2, "always", "sentence-case"],
     "scope-enum": (context) => getPackages(context).then((packages) => [2, "always", packages]),
+    "body-max-line-length": [2, "always", Infinity],
+    "footer-max-line-length": [2, "always", Infinity],
   },
 };
