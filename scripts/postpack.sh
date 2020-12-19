@@ -7,6 +7,10 @@
 # and carry forward whatever version was made during the release.
 
 set -e
-VERSION=$(jq -r '.version' package.json)
-git checkout ./package.json -q
-echo "$(jq --arg v $VERSION '.version = $v' package.json)" > package.json
+if [ ! -e .yarn-packing ]; then
+  VERSION=$(jq -r '.version' package.json)
+  git checkout ./package.json -q
+  echo "$(jq --arg v $VERSION '.version = $v' package.json)" > package.json
+else
+  rm -f .yarn-packing
+fi

@@ -6,8 +6,13 @@
 # This script will prepare the package.json file for proper dependency resolutions
 
 set -e
-yarn pack > /dev/null
-tar -xf package.tgz package/package.json
-mv package/package.json .
-rm package.tgz
-rm -rf package
+
+if [ ! -e .yarn-packing ]; then
+  touch .yarn-packing
+
+  yarn pack > /dev/null
+  tar -xf package.tgz package/package.json
+  mv package/package.json .
+  rm package.tgz
+  rm -rf package
+fi
