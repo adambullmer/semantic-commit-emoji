@@ -9,7 +9,7 @@
   "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
   "license": "GPL-3.0",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "scripts": {
     "clean": "yarn clean:build && yarn clean:test",
