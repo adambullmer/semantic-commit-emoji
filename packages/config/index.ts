@@ -1,5 +1,5 @@
 import { cosmiconfig } from "cosmiconfig";
-import TypescriptLoader from "@endemolshinegroup/cosmiconfig-typescript-loader";
+import { TypeScriptLoader } from "cosmiconfig-typescript-loader";
 
 export type EmojiMap = { [key: string]: string };
 
@@ -30,7 +30,7 @@ const explorer = cosmiconfig(moduleName, {
     `${moduleName}.config.js`,
   ],
   loaders: {
-    ".ts": TypescriptLoader,
+    ".ts": TypeScriptLoader(),
   },
 });
 

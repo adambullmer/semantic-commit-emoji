@@ -24,8 +24,8 @@
     "release:tarball": "yarn exec ../../scripts/release-tarball"
   },
   "dependencies": {
-    "@endemolshinegroup/cosmiconfig-typescript-loader": "^3.0.0",
-    "cosmiconfig": "^6.0.0"
+    "cosmiconfig": "^6.0.0",
+    "cosmiconfig-typescript-loader": "^5.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
