@@ -2,13 +2,12 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "yarn workspaces foreach --verbose --parallel --topological run build",
-    "lint:ci": "yarn workspaces foreach --verbose --parallel run lint:ci",
-    "test:ci": "yarn workspaces foreach --verbose --parallel run test:ci",
+    "build": "yarn workspaces foreach --all --verbose --interlaced --parallel --topological run build",
+    "lint:ci": "yarn workspaces foreach --all --verbose --interlaced --parallel run lint:ci",
+    "test:ci": "yarn workspaces foreach --all --verbose --interlaced --parallel run test:ci",
     "prerelease": "yarn build",
-    "release": "yarn workspaces foreach --verbose --topological run release && yarn postrelease",
-    "postrelease": "yarn workspaces foreach --verbose --topological run release:tarball",
-    "prepare": "yarn workspaces foreach --parallel --topological ws:prepare"
+    "release": "yarn workspaces foreach --all --verbose --interlaced --topological run release && yarn postrelease",
+    "postrelease": "yarn workspaces foreach --all --verbose --interlaced --topological run release:tarball"
   },
   "workspaces": [
     "packages/*"
@@ -37,5 +36,6 @@
     "semantic-release": "^17.1.1",
     "semantic-release-monorepo": "^7.0.2",
     "typescript": "^3.9.7"
-  }
+  },
+  "packageManager": "yarn@4.4.1"
 }
