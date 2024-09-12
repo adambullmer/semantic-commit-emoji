@@ -7,7 +7,8 @@
     "test:ci": "yarn workspaces foreach --all --verbose --interlaced --parallel run test:ci",
     "prerelease": "yarn build",
     "release": "yarn workspaces foreach --all --verbose --interlaced --topological run release && yarn postrelease",
-    "postrelease": "yarn workspaces foreach --all --verbose --interlaced --topological run release:tarball"
+    "postrelease": "yarn workspaces foreach --all --verbose --interlaced --topological run release:tarball",
+    "prepare": "husky"
   },
   "workspaces": [
     "packages/*"
@@ -29,9 +30,10 @@
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.2.5",
+    "husky": "^9.1.6",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "semantic-commit-emoji": "workspace:*",
     "semantic-commit-emoji-config": "workspace:*",
     "semantic-release": "^17.1.1",
     "semantic-release-monorepo": "^7.0.2",
