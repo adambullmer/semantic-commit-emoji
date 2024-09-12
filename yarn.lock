@@ -1915,7 +1915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:8.5.0, @typescript-eslint/eslint-plugin@npm:^8.5.0":
+"@typescript-eslint/eslint-plugin@npm:8.5.0":
   version: 8.5.0
   resolution: "@typescript-eslint/eslint-plugin@npm:8.5.0"
   dependencies:
@@ -1938,7 +1938,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:8.5.0, @typescript-eslint/parser@npm:^8.5.0":
+"@typescript-eslint/parser@npm:8.5.0":
   version: 8.5.0
   resolution: "@typescript-eslint/parser@npm:8.5.0"
   dependencies:
@@ -2733,7 +2733,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.0.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -2999,9 +2999,6 @@ __metadata:
     "@commitlint/types": "npm:^19.5.0"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.16.5"
-    "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
-    "@typescript-eslint/parser": "npm:^8.5.0"
-    chalk: "npm:^4.1.0"
     commitlint-plugin-semantic-commit-emoji: "workspace:*"
     eslint: "npm:^9.10.0"
     eslint-config-prettier: "npm:^9.1.0"
@@ -3024,9 +3021,6 @@ __metadata:
     "@commitlint/types": "npm:^19.5.0"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.16.5"
-    "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
-    "@typescript-eslint/parser": "npm:^8.5.0"
-    chalk: "npm:^4.1.0"
     eslint: "npm:^9.10.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-formatter-junit: "npm:^8.40.0"
@@ -7812,6 +7806,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.5.0"
     "@commitlint/config-conventional": "npm:^19.5.0"
+    "@commitlint/types": "npm:^19.5.0"
     "@eslint/js": "npm:^9.10.0"
     "@semantic-release/commit-analyzer": "npm:^13.0.0"
     "@semantic-release/git": "npm:^10.0.1"
@@ -7877,8 +7872,6 @@ __metadata:
     "@endemolshinegroup/cosmiconfig-typescript-loader": "npm:^3.0.0"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.16.5"
-    "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
-    "@typescript-eslint/parser": "npm:^8.5.0"
     cosmiconfig: "npm:^6.0.0"
     eslint: "npm:^9.10.0"
     eslint-config-prettier: "npm:^9.1.0"
@@ -7898,8 +7891,6 @@ __metadata:
   dependencies:
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.16.5"
-    "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
-    "@typescript-eslint/parser": "npm:^8.5.0"
     eslint: "npm:^9.10.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-formatter-junit: "npm:^8.40.0"
