@@ -1846,10 +1846,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^14.6.0":
-  version: 14.18.63
-  resolution: "@types/node@npm:14.18.63"
-  checksum: 10/82a7775898c2ea6db0b610a463512206fb2c7adc1af482c7eb44b99d94375fff51c74f67ae75a63c5532971159f30c866a4d308000624ef02fd9a7175e277019
+"@types/node@npm:^20.16.5":
+  version: 20.16.5
+  resolution: "@types/node@npm:20.16.5"
+  dependencies:
+    undici-types: "npm:~6.19.2"
+  checksum: 10/39a8457149dc17cdea57afc90d4da53182fdb8b958d5bb065a15d123d81d4efa6b51a0de92428d05ead2e63ce07195586f71083401b99cdbcd04662344fbf7a1
   languageName: node
   linkType: hard
 
@@ -2996,7 +2998,7 @@ __metadata:
   dependencies:
     "@commitlint/types": "npm:^19.5.0"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^14.6.0"
+    "@types/node": "npm:^20.16.5"
     "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
     "@typescript-eslint/parser": "npm:^8.5.0"
     chalk: "npm:^4.1.0"
@@ -3021,7 +3023,7 @@ __metadata:
   dependencies:
     "@commitlint/types": "npm:^19.5.0"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^14.6.0"
+    "@types/node": "npm:^20.16.5"
     "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
     "@typescript-eslint/parser": "npm:^8.5.0"
     chalk: "npm:^4.1.0"
@@ -7874,7 +7876,7 @@ __metadata:
   dependencies:
     "@endemolshinegroup/cosmiconfig-typescript-loader": "npm:^3.0.0"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^14.6.0"
+    "@types/node": "npm:^20.16.5"
     "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
     "@typescript-eslint/parser": "npm:^8.5.0"
     cosmiconfig: "npm:^6.0.0"
@@ -7895,7 +7897,7 @@ __metadata:
   resolution: "semantic-commit-emoji@workspace:packages/cli"
   dependencies:
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^14.6.0"
+    "@types/node": "npm:^20.16.5"
     "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
     "@typescript-eslint/parser": "npm:^8.5.0"
     eslint: "npm:^9.10.0"
