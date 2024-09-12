@@ -7,6 +7,7 @@
   "homepage": "https://github.com/adambullmer/semantic-commit-emoji/tree/master/packages/commitlint-plugin#readme",
   "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
   "license": "GPL-3.0",
+  "type": "module",
   "engines": {
     "node": ">=10"
   },
@@ -39,5 +40,17 @@
   },
   "peerDependencies": {
     "@commitlint/cli": "^11.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./parser": {
+      "import": "./dist/parser.js",
+      "require": "./dist/parser.js",
+      "types": "./types/parser.d.ts"
+    }
   }
 }
