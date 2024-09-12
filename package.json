@@ -31,7 +31,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^9.1.6",
-    "lint-staged": "^10.2.11",
+    "lint-staged": "^15.2.10",
     "prettier": "^2.0.5",
     "semantic-commit-emoji": "workspace:*",
     "semantic-commit-emoji-config": "workspace:*",
