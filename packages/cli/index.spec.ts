@@ -1,6 +1,6 @@
-/// <reference types="@types/jest" />
-import index from "./index";
+import { describe, it, expect } from "vitest";
 import { Config } from "semantic-commit-emoji-config";
+import index from "./index";
 
 const config: Config = {
   withSpace: false,
