@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { Config } from "semantic-commit-emoji-config";
-import index from "./index";
+import index from "./index.js";
 
 const config: Config = {
   withSpace: false,

@@ -3,7 +3,7 @@ import * as fs from "node:fs";
 import { describe, it, expect, beforeEach, afterEach, vi, type MockInstance } from "vitest";
 import { Config } from "semantic-commit-emoji-config";
 
-import processFile from "./process-file";
+import processFile from "./process-file.js";
 
 const config: Config = {
   withSpace: false,
