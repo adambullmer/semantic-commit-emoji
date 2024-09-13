@@ -1,6 +1,6 @@
 {
   "name": "semantic-commit-emoji",
-  "version": "0.6.2",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "bin": "dist/cli.js",
   "types": "types/index.d.ts",
