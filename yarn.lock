@@ -2686,17 +2686,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^4.4.0":
-  version: 4.6.3
-  resolution: "conventional-changelog-conventionalcommits@npm:4.6.3"
-  dependencies:
-    compare-func: "npm:^2.0.0"
-    lodash: "npm:^4.17.15"
-    q: "npm:^1.5.1"
-  checksum: 10/70b9ba65a72d57d40aeea7e787cd200cd8350430ad959892a6cc2cb8b9c3874ba8e331d355c2565549c0a28881c114c5a8f1d4dab61fd8607f29d7e2174e181b
-  languageName: node
-  linkType: hard
-
 "conventional-changelog-conventionalcommits@npm:^7.0.2":
   version: 7.0.2
   resolution: "conventional-changelog-conventionalcommits@npm:7.0.2"
@@ -6187,13 +6176,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"q@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "q@npm:1.5.1"
-  checksum: 10/70c4a30b300277165cd855889cd3aa681929840a5940413297645c5691e00a3549a2a4153131efdf43fe8277ee8cf5a34c9636dcb649d83ad47f311a015fd380
-  languageName: node
-  linkType: hard
-
 "qrcode-terminal@npm:^0.12.0":
   version: 0.12.0
   resolution: "qrcode-terminal@npm:0.12.0"
@@ -6539,7 +6521,6 @@ __metadata:
     "@yarnpkg/pnpify": "npm:^4.1.1"
     commitlint-config-semantic-commit-emoji: "workspace:*"
     commitlint-plugin-semantic-commit-emoji: "workspace:*"
-    conventional-changelog-conventionalcommits: "npm:^4.4.0"
     eslint: "npm:^9.10.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-formatter-junit: "npm:^8.40.0"
