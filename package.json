@@ -4,7 +4,8 @@
   "scripts": {
     "build": "yarn workspaces foreach --all --verbose --interlaced --parallel --topological run build",
     "lint:ci": "yarn workspaces foreach --all --verbose --interlaced --parallel run lint:ci",
-    "test:ci": "yarn workspaces foreach --all --verbose --interlaced --parallel run test:ci",
+    "test": "yarn run vitest --ui",
+    "test:ci": "yarn run vitest",
     "prerelease": "yarn build",
     "release": "yarn workspaces foreach --all --verbose --interlaced --topological run release && yarn postrelease",
     "postrelease": "yarn workspaces foreach --all --verbose --interlaced --topological run release:tarball",
@@ -25,6 +26,9 @@
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.1",
     "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "@vitest/ui": "^2.1.0",
     "@yarnpkg/pnpify": "^2.1.0",
     "commitlint-config-semantic-commit-emoji": "workspace:*",
     "commitlint-plugin-semantic-commit-emoji": "workspace:*",
@@ -42,7 +46,8 @@
     "semantic-release": "^24.1.1",
     "semantic-release-monorepo": "^8.0.2",
     "typescript": "^5.6.2",
-    "typescript-eslint": "^8.5.0"
+    "typescript-eslint": "^8.5.0",
+    "vitest": "^2.1.0"
   },
   "packageManager": "yarn@4.4.1"
 }
