@@ -39,7 +39,7 @@ export default {
       },
     ],
     [
-      "@semantic-release/npm",
+      "semantic-release-yarn",
       {
         // Requires OTP code. Running in subsequent step with interactive prompt
         npmPublish: false,
