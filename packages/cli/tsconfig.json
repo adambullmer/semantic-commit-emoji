@@ -1,9 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "declarationDir": "./types" /* Redirect declarations to the directory */,
     "outDir": "./dist" /* Redirect output structure to the directory. */,
     "rootDir": "./" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.d.ts", "**/*.spec.ts", "vitest.config.ts"]
 }
