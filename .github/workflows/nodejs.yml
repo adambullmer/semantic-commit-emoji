@@ -8,12 +8,12 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - name: yarn install, test, and build
@@ -23,7 +23,7 @@ jobs:
           yarn test:ci
         env:
           CI: true
-      - uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./artifacts/coverage/lcov.info
@@ -33,11 +33,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: Use Repo Node.js version
+        uses: actions/setup-node@v4
         with:
-          node-version: 12.x
+          node-version-file: .nvmrc
       - name: yarn install, test, and build
         run: |
           yarn install --immutable

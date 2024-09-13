@@ -1,4 +1,4 @@
-import { Config } from "semantic-commit-emoji-config";
+import { type Config } from "semantic-commit-emoji-config";
 
 const config: Partial<Config> = {};
 

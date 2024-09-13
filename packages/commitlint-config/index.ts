@@ -1,8 +1,9 @@
-import { UserConfig } from "@commitlint/types";
+import { type UserConfig } from "@commitlint/types";
+import { parserPreset } from "commitlint-plugin-semantic-commit-emoji/parser";
 
 const config: UserConfig = {
   plugins: ["commitlint-plugin-semantic-commit-emoji"],
-  parserPreset: "commitlint-plugin-semantic-commit-emoji/dist/parser",
+  parserPreset,
   rules: {
     "type-enum": [
       2,
@@ -27,7 +28,4 @@ const config: UserConfig = {
   },
 };
 
-// Destructure to mimic behavior of module.exports
-export const plugins = config.plugins;
-export const parserPreset = config.parserPreset;
-export const rules = config.rules;
+export default config;

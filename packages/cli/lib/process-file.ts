@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import processCommitMessage from "../index";
+import processCommitMessage from "../index.js";
 import { Config } from "semantic-commit-emoji-config";
 
 /**

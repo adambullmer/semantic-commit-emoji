@@ -1,8 +1,9 @@
-/// <reference types="node" />
-/// <reference types="@types/jest" />
-import processFile from "./process-file";
+import * as fs from "node:fs";
+
+import { describe, it, expect, beforeEach, afterEach, vi, type MockInstance } from "vitest";
 import { Config } from "semantic-commit-emoji-config";
-import * as fs from "fs";
+
+import processFile from "./process-file.js";
 
 const config: Config = {
   withSpace: false,
@@ -31,24 +32,26 @@ const fileMap: { [key: string]: string | undefined } = {
 const formatMap: { [key: string]: string | undefined } = {
   [fileContents]: emojiPrefix + fileContents,
 };
-jest.mock("fs");
-jest.mock("../index", () => {
-  return (_: Config, input: string): string | undefined => formatMap[input];
+vi.mock("fs");
+vi.mock("../index", () => {
+  return {
+    default: (_: Config, input: string): string | undefined => formatMap[input],
+  };
 });
 
 describe("process-files.ts", () => {
-  let readSpy: jest.SpyInstance;
-  let writeSpy: jest.SpyInstance;
+  let readSpy: MockInstance;
+  let writeSpy: MockInstance;
 
   beforeEach(() => {
-    readSpy = jest.spyOn(fs, "readFileSync").mockImplementation((filePath) => {
+    readSpy = vi.spyOn(fs, "readFileSync").mockImplementation((filePath) => {
       const contents = fileMap[filePath.toString()];
       if (contents === undefined) {
         throw new Error("Mock file not found");
       }
       return contents;
     });
-    writeSpy = jest.spyOn(fs, "writeFileSync");
+    writeSpy = vi.spyOn(fs, "writeFileSync");
   });
 
   afterEach(() => {
