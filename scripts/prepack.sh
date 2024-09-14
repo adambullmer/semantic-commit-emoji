@@ -5,14 +5,14 @@
 #
 # This script will prepare the package.json file for proper dependency resolutions
 
-set -e
+# set -e
 
-if [ ! -e .yarn-packing ]; then
-  touch .yarn-packing
+# if [ ! -e .yarn-packing ]; then
+#   touch .yarn-packing
 
-  yarn pack > /dev/null
-  tar -xf package.tgz package/package.json
-  mv package/package.json .
-  rm package.tgz
-  rm -rf package
-fi
+#   yarn pack > /dev/null
+#   tar -xf package.tgz package/package.json
+#   mv package/package.json .
+#   rm package.tgz
+#   rm -rf package
+# fi
