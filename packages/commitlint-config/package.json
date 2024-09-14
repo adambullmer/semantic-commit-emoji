@@ -1,6 +1,6 @@
 {
   "name": "commitlint-config-semantic-commit-emoji",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "repository": {
