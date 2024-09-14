@@ -32,6 +32,7 @@
     "@yarnpkg/pnpify": "^4.1.1",
     "commitlint-config-semantic-commit-emoji": "workspace:*",
     "commitlint-plugin-semantic-commit-emoji": "workspace:*",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-formatter-junit": "^8.40.0",
