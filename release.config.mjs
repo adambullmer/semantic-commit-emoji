@@ -1,5 +1,6 @@
 import { parserPreset } from "commitlint-plugin-semantic-commit-emoji/parser";
 
+// Requires a first party dependency on conventional-changelog-conventionalcommits
 const preset = "conventionalcommits";
 
 /**
