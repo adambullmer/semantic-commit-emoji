@@ -37,6 +37,9 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
+      - name: Build all self relied upon packages
+        run: yarn run build
+
       - name: Release
         run: yarn run release
         env:
