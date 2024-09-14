@@ -100,7 +100,7 @@ npx commit-message-emoji "$@"
 
 ### Usage with Husky
 
-An example for husky can be found in this repo's [.huskyrs.js file](https://github.com/adambullmer/semantic-commit-emoji/blob/master/.huskyrc.js).
+An example for husky can be found in this repo's [.husky/commit-msg hook](https://github.com/adambullmer/semantic-commit-emoji/blob/master/.husky/commit-msg).
 
 ## Limitations
 
