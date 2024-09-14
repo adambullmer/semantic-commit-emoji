@@ -7,8 +7,8 @@
     "test": "yarn run vitest --ui",
     "test:ci": "yarn run vitest",
     "prerelease": "yarn build",
-    "release": "yarn workspaces foreach --all --verbose --interlaced --topological run release && yarn postrelease",
-    "postrelease": "yarn workspaces foreach --all --verbose --interlaced --topological run release:tarball",
+    "release": "yarn workspaces foreach --all --verbose --interlaced --topological run release",
+    "publish": "yarn workspaces foreach --all --verbose --interlaced --topological run release:tarball",
     "prepare": "husky"
   },
   "type": "module",
