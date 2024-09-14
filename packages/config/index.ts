@@ -25,12 +25,15 @@ const explorer = cosmiconfig(moduleName, {
     `.${moduleName}rc.yaml`,
     `.${moduleName}rc.yml`,
     `.${moduleName}rc.ts`,
+    `.${moduleName}rc.mjs`,
     `.${moduleName}rc.js`,
     `${moduleName}.config.ts`,
+    `${moduleName}.config.mjs`,
     `${moduleName}.config.js`,
   ],
   loaders: {
     ".ts": TypeScriptLoader(),
+    ".mjs": TypeScriptLoader(),
   },
 });
 
