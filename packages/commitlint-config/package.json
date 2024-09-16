@@ -2,6 +2,11 @@
   "name": "commitlint-config-semantic-commit-emoji",
   "version": "2.0.3",
   "description": "Config for commitlint to define parser presets and rule type configs",
+  "keywords": [
+    "semantic-commit",
+    "emoji",
+    "config"
+  ],
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "repository": {

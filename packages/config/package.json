@@ -2,6 +2,10 @@
   "name": "semantic-commit-emoji-config",
   "version": "2.1.1",
   "description": "Config loader for semantic-commit-emoji",
+  "keywords": [
+    "semantic-commit",
+    "emoji"
+  ],
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "repository": {

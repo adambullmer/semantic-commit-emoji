@@ -2,6 +2,11 @@
   "name": "commitlint-plugin-semantic-commit-emoji",
   "version": "2.0.2",
   "description": "Plugin for commitlint parser compatible with semantic-commit-emoji",
+  "keywords": [
+    "semantic-commit",
+    "emoji",
+    "plugin"
+  ],
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "repository": {
