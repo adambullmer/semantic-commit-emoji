@@ -1,6 +1,7 @@
 {
   "name": "semantic-commit-emoji",
   "version": "1.0.2",
+  "description": "CLI for rewriting semantic commits with an emoji prefix",
   "main": "dist/index.js",
   "bin": "dist/cli.js",
   "types": "types/index.d.ts",
