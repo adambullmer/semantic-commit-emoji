@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/adambullmer/semantic-commit-emoji/tree/master/packages/commitlint-config#readme",
   "author": "Adam Bullmer <psycodrumfreak@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "LGPL-3.0-only",
   "type": "module",
   "engines": {
     "node": ">=18"
