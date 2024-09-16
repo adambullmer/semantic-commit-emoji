@@ -1,6 +1,6 @@
 {
   "name": "semantic-commit-emoji",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "CLI for rewriting semantic commits with an emoji prefix",
   "keywords": [
     "semantic-commit",
