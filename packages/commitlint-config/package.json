@@ -35,10 +35,10 @@
     "release:tarball": "yarn exec ../../scripts/release-tarball"
   },
   "dependencies": {
+    "@commitlint/types": "^19.5.0",
     "commitlint-plugin-semantic-commit-emoji": "workspace:*"
   },
   "devDependencies": {
-    "@commitlint/types": "^19.5.0",
     "@types/node": "^20.16.5",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
