@@ -1,6 +1,6 @@
 {
   "name": "commitlint-config-semantic-commit-emoji",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Config for commitlint to define parser presets and rule type configs",
   "keywords": [
     "semantic-commit",
