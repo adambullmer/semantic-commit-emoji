@@ -1,0 +1,6 @@
+{
+  "name": "semantic-commit-emoji",
+  "description": "Guidelines and style rules for authoring semantic commit messages with emojis, and instructions for staging and splitting commits deterministically.",
+  "version": "1.0.0",
+  "instructions": "Review the semantic-commit-emoji skill instructions located at .github/skills/semantic-commit-emoji/SKILL.md before creating commits or staging and splitting commits."
+}

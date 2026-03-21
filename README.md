@@ -49,6 +49,22 @@ The list of current message types and their used emoji
 | chore    | :wrench: `:wrench:`                             |
 | types    | :label: `:label:`                               |
 
+## AI Agent Discoverability
+
+If you are using AI agents like Claude, Cursor, GitHub Copilot, or Gemini, this repository includes built-in configurations that allow these tools to discover and automatically adhere to the `semantic-commit-emoji` convention.
+
+By cloning or referencing this repository's configurations, your AI assistants will automatically read the canonical skill file located at `.github/skills/semantic-commit-emoji/SKILL.md` when preparing commits.
+
+The following agents are natively supported:
+
+- **GitHub Copilot**: Uses `.github/copilot-instructions.md`
+- **Cursor**: Uses `.cursorrules`
+- **Claude / Claude Code**: Uses `CLAUDE.md`
+- **Gemini**: Uses `GEMINI.md`, `.gemini/GEMINI.md`, and is registered as a CLI extension via `.gemini/extensions/semantic-commit-emoji/gemini-extension.json`
+- **Generic Agents**: Uses standard `AGENTS.md`
+
+No further action is required; once your AI agent is operating within the workspace directory, these files automatically steer its commit messages into full compliance with `semantic-commit-emoji`.
+
 ## Installation
 
 This can either be a global module if this is just a personal preference, or a project one, so that you may enforce consistency on all contributors.
