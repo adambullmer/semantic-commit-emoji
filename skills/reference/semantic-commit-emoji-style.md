@@ -8,20 +8,20 @@ This allows for plain text representations of a commit's type with visual indica
 
 Below is the required mapping of commit types to emojis. You must use one of these types for all commits.
 
-| Type     | Emoji                   | Syntax                  | Use Case                                                              |
-| -------- | ----------------------- | ----------------------- | --------------------------------------------------------------------- |
-| feat     | :sparkles:              | `:sparkles:`            | A new feature for the user or API consumer.                           |
-| fix      | :bug:                   | `:bug:`                 | A bug fix for the user or API consumer.                               |
-| docs     | :pencil:                | `:pencil:`              | Changes to the documentation.                                         |
-| refactor | :recycle:               | `:recycle:`             | A code change that neither fixes a bug nor adds a feature.            |
-| style    | :art:                   | `:art:`                 | Changes that do not affect the meaning of the code (formatting, etc). |
-| test     | :microscope:            | `:microscope:`          | Adding missing tests or correcting existing tests.                    |
-| perf     | :zap:                   | `:zap:`                 | A code change that improves performance.                              |
-| hotfix   | :ambulance:             | `:ambulance:`           | Critical bug fix directly to production.                              |
-| locale   | :globe_with_meridians:  | `:globe_with_meridians:`| Localization and internationalization updates.                        |
-| ci       | :construction_worker:   | `:construction_worker:` | Changes to CI configuration files and scripts.                        |
-| chore    | :wrench:                | `:wrench:`              | Other changes that don't modify `src` or `test` files.                |
-| types    | :label:                 | `:label:`               | Type definitions (e.g., TypeScript or Flow updates).                  |
+| Type     | Emoji | Use Case                                                              |
+| -------- | ----- | --------------------------------------------------------------------- |
+| feat     | ✨ `:sparkles:` | A new feature for the user or API consumer.                           |
+| fix      | 🐛 `:bug:`      | A bug fix for the user or API consumer.                               |
+| docs     | 📝 `:pencil:`   | Changes to the documentation.                                         |
+| refactor | ♻️ `:recycle:`  | A code change that neither fixes a bug nor adds a feature.            |
+| style    | 🎨 `:art:`      | Changes that do not affect the meaning of the code (formatting, etc). |
+| test     | 🔬 `:microscope:` | Adding missing tests or correcting existing tests.                    |
+| perf     | ⚡️ `:zap:`      | A code change that improves performance.                              |
+| hotfix   | 🚑 `:ambulance:`| Critical bug fix directly to production.                              |
+| locale   | 🌐 `:globe_with_meridians:` | Localization and internationalization updates.                        |
+| ci       | 👷 `:construction_worker:` | Changes to CI configuration files and scripts.                        |
+| chore    | 🔧 `:wrench:`   | Other changes that don't modify `src` or `test` files.                |
+| types    | 🏷️ `:label:`    | Type definitions (e.g., TypeScript or Flow updates).                  |
 
 ## Guidelines
 
